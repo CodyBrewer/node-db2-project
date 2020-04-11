@@ -32,8 +32,11 @@ The client for this API is a car dealer who has provided the following specs:
 - Add `UPDATE` and `DELETE` operations to your API.
 - Write a schema file for a `sales` table. This table should track information on the sale of each car. You may wish to research `foreign keys` in order to link each sale to the entry in `cars` which sold.
 
+## Project Completion
+
 Follow these steps for completing your project.
 
 - [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into master (student's Repository). **Please don't merge your own pull request**
 - [ ] Add your _Team Lead_ as a reviewer on the pull-request
 - [ ] Your _Team Lead_ will count the project as complete by merging the branch back into master.
+- [ ] Submit Airtable Form
