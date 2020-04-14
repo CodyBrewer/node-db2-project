@@ -23,17 +23,42 @@ const get = (id) => {
     }
 }
 
-const getById = () => {}
+const insert = (car) => {
+    let query = db('cars')
+    if (car) {
+        return query
+            .insert(car)
+            .then((insertedCar) => insertedCar)
+            .catch((err) => {
+                console.log(err)
+            }) 
+    }
+}
 
-const insert = () => {}
+const update = (id, changes) => {
+    let query = db('cars')
+    if ( id && changes ) {
+        return query
+            .where({ id })
+            .update(changes)
+            .then((updatedCar) => updatedCar)
+            .catch( (err) => console.log(err))
+    } else {
+        console.log('no id or changes provided')
+    }
+}
 
-const update = () => {}
-
-const remove = () => {}
+const remove = (id) => {
+    let query = db('cars')
+    return query
+        .where({ id })
+        .del()
+        .then((deletedCar) => deletedCar)
+        .catch((err) => console.log(err));   
+}
 
 module.exports = {
     get,
-    getById,
     insert,
     update,
     remove,
